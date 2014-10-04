@@ -96,8 +96,8 @@ public:
 	// Variables.
 	in_addr Addr;
 	DWORD   ThreadId;
-	TCHAR   HostName[256];
-	TCHAR   Error[256];
+	TCHAR   HostName[512];	//Hanfling: Changed from 256 -> 512 to match.
+	TCHAR   Error[512];		//Hanfling: Changed from 256 -> 512 to match.
 
 	#if __GNUG__
 	pthread_t	ResolveThread;

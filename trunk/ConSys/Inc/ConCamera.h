@@ -28,14 +28,31 @@ public:
 	BYTE  cameraType;					// Camera Type for current event
 	BYTE  cameraMode;					// Current camera display mode
 
+	class DConLight* conLightSpeaker;      //Hanfling: Used to light actor's faces (WAS MISSING)
+	class DConLight* conLightSpeakingTo;   //Hanfling: Used to light actor's faces (WAS MISSING)
+   
 	FVector cameraOffset;				// Camera offset, for CT_Actor mode
 	FRotator rotation;					// Camera Rotation
+	
+	FLOAT cosAngle; 					//Hanfling: Was missing.
+	INT firstActorRotation; 			//Hanfling: Was missing.
+	INT setActorCount;					//Hanfling: Was missing.
+	BITFIELD bCameraLocationSaved:1;	//Hanfling: Was missing.
+
+	// Camera Fallback Positions (for when camera view obstructed)
+	BYTE cameraFallbackPositions[9]; 	//Hanfling: ECameraPositions (WAS MISSING)
+	BYTE cameraHeightPositions[9]; 		//Hanfling: ECameraPositions (WAS MISSING)
+
+	INT currentFallback; 				//Hanfling: Was missing.
+	UBOOL bUsingFallback; 				//Hanfling: Was missing.
 	
 	// Used for CT_Speakers mode
 	FLOAT heightModifer;				// Height Modifier
 	FLOAT centerModifier;				// Center Point modifier
 	FLOAT distanceMultiplier;			// Distance Multiplier
 
+	FLOAT heightFallbackTrigger;		//Hanfling: Was missing.
+	
 	// Actors associated with camera placement
 	class AActor* firstActor;			
 	class AActor* secondActor;

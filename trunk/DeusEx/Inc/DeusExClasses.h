@@ -110,6 +110,7 @@ public:
     class AInventory* inHand;
     class AInventory* inHandPending;
     class AInventory* ClientinHandPending;
+	class AInventory* LastinHand; //Hanfling: Was missing.
     BITFIELD bInHandTransition:1 GCC_PACK(4);
     BITFIELD bBeltIsMPInventory:1;
     class UDeusExGoal* FirstGoal GCC_PACK(4);

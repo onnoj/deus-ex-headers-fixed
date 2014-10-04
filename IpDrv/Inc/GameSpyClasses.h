@@ -55,6 +55,21 @@ void GenerateSecretKey( BYTE* key, const TCHAR *GameName )
 		*key = 95 - '*' - i++;
 		key++;
 	}
+	else if( !appStrcmp(GameName, TEXT("deusex")) ) //Hanfling: Added this for DX as it was missing.
+	{
+		*key = 'A';
+		key++;
+		*key = 'v';
+		key++;
+		*key = '3';
+		key++;
+		*key = 'M';
+		key++;
+		*key = '9';
+		key++;
+		*key = '9';
+		key++;
+	}
 	else if( !appStrcmp(GameName, TEXT("oldver")) )
 	{
 		// oldver - used for master server to retain compatibility
